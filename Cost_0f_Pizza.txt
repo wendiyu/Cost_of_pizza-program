@@ -1,0 +1,46 @@
+#
+#Created by: Wendi Yu
+#Created on: Oct 17 2018
+#
+#Calculate the cost of pizza
+
+LARGEPIZZA = 6.00
+EXTRALARGEPIZZA = 10.00
+TOPPING1 = 1.00
+TOPPING2 = 1.75
+TOPPING3 = 2.50
+TOPPING4 = 3.25
+HST = 0.13
+
+pizza_size_text = float(input("Enter these following number for specific size of pizza 1)Large pizza 2) Extra large pizza. Size of pizza = "))
+
+topping_text = float(input("Enter these following number for specific topping 1)Topping1  2) Topping2 3) Topping3 4) Topping4 Select topping = "))
+
+PIZZA_COST = 0.00
+TOPPING_COST = 0.00
+
+# pizza cost
+
+if pizza_size_text == 1:
+  PIZZA_COST = LARGEPIZZA
+elif pizza_size_text == 2:
+  PIZZA_COST = EXTRALARGEPIZZA
+
+# toppng cost
+
+if topping_text == 1:
+  TOPPING_COST = TOPPING1
+elif topping_text == 2:
+  TOPPING_COST = TOPPING2
+elif topping_text == 3:
+  TOPPING_COST = TOPPING3
+elif topping_text == 4:
+  TOPPING_COST = TOPPING4
+
+subtotal = PIZZA_COST + TOPPING_COST
+tax = subtotal * HST
+total = tax + subtotal
+
+print("Subtotal:$  " + str(round(subtotal,2)), "Tax:$ " + str(round(tax,2)), "Total:$ " + str(round(total,2)))
+
+input()
